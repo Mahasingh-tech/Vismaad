@@ -51,8 +51,10 @@ z-index: 1000;
 }
 
 header > div:first-child img {
-width: 500px;
-height: auto;
+    width: 260px !important;
+    max-width: none !important;
+    height: auto !important;
+    display: block;
 }
 
 nav {
