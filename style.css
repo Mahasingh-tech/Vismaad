@@ -43,16 +43,11 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 gap: 40px;
-
-```
 background: #ffffff;
 border-bottom: 1px solid #eee5dc;
-
 position: sticky;
 top: 0;
 z-index: 1000;
-```
-
 }
 
 header > div:first-child img {
@@ -72,12 +67,8 @@ font-size: 13px;
 font-weight: 600;
 letter-spacing: 0.5px;
 color: #333;
-
-```
 position: relative;
 transition: 0.3s ease;
-```
-
 }
 
 nav a::after {
@@ -116,7 +107,7 @@ color: white;
 }
 
 /* =========================================================
-GENERAL SECTIONS
+GENERAL
 ========================================================= */
 
 main > section {
@@ -158,21 +149,19 @@ HERO
 
 #home {
 min-height: calc(100vh - 90px);
-
-```
 display: grid;
 grid-template-columns: 1.05fr 0.95fr;
 align-items: center;
 gap: 70px;
-
 padding-top: 80px;
 padding-bottom: 80px;
-
 background:
-    radial-gradient(circle at 85% 50%, rgba(141, 32, 37, 0.08), transparent 35%),
-    #fffdf9;
-```
-
+radial-gradient(
+circle at 85% 50%,
+rgba(141, 32, 37, 0.08),
+transparent 35%
+),
+#fffdf9;
 }
 
 #home > div:last-child {
@@ -185,11 +174,7 @@ align-items: center;
 width: min(520px, 100%);
 max-height: 520px;
 object-fit: contain;
-
-```
 filter: drop-shadow(0 25px 30px rgba(0, 0, 0, 0.12));
-```
-
 }
 
 #home > p:first-child {
@@ -203,10 +188,6 @@ font-family: "Cinzel Decorative", serif;
 font-size: clamp(42px, 5.5vw, 76px);
 line-height: 1.12;
 margin-bottom: 30px;
-}
-
-#home h1::first-line {
-color: #241f1c;
 }
 
 #home > p:nth-of-type(2) {
@@ -228,11 +209,7 @@ border-radius: 4px;
 font-size: 13px;
 font-weight: 700;
 letter-spacing: 0.5px;
-
-```
 transition: 0.3s ease;
-```
-
 }
 
 #home > div:nth-of-type(1) a:first-child {
@@ -256,7 +233,7 @@ color: white;
 }
 
 /* =========================================================
-WELCOME SECTION
+WELCOME
 ========================================================= */
 
 main > section:not(#home):not(#products):not(#about):not(#quality):not(#contact) {
@@ -274,17 +251,11 @@ main > section:not(#home):not(#products):not(#about):not(#quality):not(#contact)
 display: inline-block;
 margin-top: 25px;
 padding: 13px 24px;
-
-```
 border: 1px solid #8d2025;
 color: #8d2025;
-
 font-size: 13px;
 font-weight: 700;
-
 transition: 0.3s ease;
-```
-
 }
 
 main > section:not(#home):not(#products):not(#about):not(#quality):not(#contact) a:hover {
@@ -299,18 +270,6 @@ PRODUCTS
 #products {
 background: #ffffff;
 text-align: center;
-}
-
-#products > p:not(:first-child) {
-color: #777;
-margin-bottom: 45px;
-}
-
-#products > h2 {
-margin-bottom: 12px;
-}
-
-#products {
 display: grid;
 grid-template-columns: repeat(12, 1fr);
 column-gap: 25px;
@@ -323,21 +282,23 @@ row-gap: 30px;
 grid-column: 1 / -1;
 }
 
+#products > p:not(:first-child) {
+color: #777;
+margin-bottom: 45px;
+}
+
+#products > h2 {
+margin-bottom: 12px;
+}
+
 #products > article {
 grid-column: span 4;
-
-```
 background: #fffdf9;
 border: 1px solid #eee5dc;
-
 text-align: left;
-
 padding-bottom: 25px;
-
 transition: 0.35s ease;
 overflow: hidden;
-```
-
 }
 
 #products > article:hover {
@@ -366,14 +327,10 @@ margin-right: 25px;
 #products > article > p:first-of-type {
 margin-top: 23px;
 margin-bottom: 8px;
-
-```
 color: #a77b32;
 font-size: 11px;
 font-weight: 700;
 letter-spacing: 2px;
-```
-
 }
 
 #products > article h3 {
@@ -406,25 +363,16 @@ WHY VISMAAD
 main > section:not(#home):not(#products):not(#about):not(#quality):not(#contact) > div {
 max-width: 1100px;
 margin: 45px auto 0;
-
-```
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 gap: 20px;
-```
-
 }
 
 main > section:not(#home):not(#products):not(#about):not(#quality):not(#contact) article {
 padding: 30px 22px;
-
-```
 background: white;
 border: 1px solid #e9e0d6;
-
 text-align: left;
-```
-
 }
 
 main > section:not(#home):not(#products):not(#about):not(#quality):not(#contact) article h3 {
@@ -444,14 +392,9 @@ ABOUT
 
 #about {
 background: #fffdf9;
-
-```
 max-width: 1000px;
 margin: auto;
-
 text-align: center;
-```
-
 }
 
 #about > p:not(:first-child) {
@@ -463,21 +406,13 @@ color: #666;
 #about > a {
 display: inline-block;
 margin-top: 20px;
-
-```
 padding: 14px 28px;
-
 background: #8d2025;
 color: white;
-
 font-size: 13px;
 font-weight: 700;
-
 border-radius: 4px;
-
 transition: 0.3s ease;
-```
-
 }
 
 #about > a:hover {
@@ -491,13 +426,9 @@ QUALITY
 
 #quality {
 background: #f7f2eb;
-
-```
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 gap: 22px;
-```
-
 }
 
 #quality > p:first-child,
@@ -515,11 +446,7 @@ margin-top: -10px;
 background: white;
 padding: 30px;
 border: 1px solid #e8dfd5;
-
-```
 transition: 0.3s ease;
-```
-
 }
 
 #quality > article:hover {
@@ -546,17 +473,11 @@ font-size: 13px;
 
 #quality > div {
 grid-column: 1 / -1;
-
-```
 margin-top: 20px;
 padding: 30px;
-
 background: #8d2025;
 color: white;
-
 text-align: center;
-```
-
 }
 
 #quality > div h3 {
@@ -590,21 +511,13 @@ color: #777;
 #contact > div {
 display: inline-block;
 vertical-align: top;
-
-```
 width: min(420px, 100%);
 margin: 25px 10px 0;
-
 padding: 30px;
-
 border: 1px solid #e8dfd5;
 background: #fffdf9;
-
 text-align: left;
-
 transition: 0.3s ease;
-```
-
 }
 
 #contact > div:hover {
@@ -626,12 +539,8 @@ font-size: 14px;
 #contact > div a {
 display: inline-block;
 margin-top: 10px;
-
-```
 color: #8d2025;
 font-weight: 700;
-```
-
 }
 
 #contact > div a:hover {
@@ -644,16 +553,11 @@ FOOTER
 
 footer {
 padding: 70px 7% 25px;
-
-```
 background: #211d1b;
 color: #ddd;
-
 display: grid;
 grid-template-columns: 2fr 1fr 1.5fr;
 gap: 50px;
-```
-
 }
 
 footer > div:first-child img {
@@ -695,16 +599,10 @@ margin-bottom: 7px;
 
 footer > div:last-child {
 grid-column: 1 / -1;
-
-```
 padding-top: 25px;
 margin-top: 15px;
-
 border-top: 1px solid rgba(255, 255, 255, 0.12);
-
 text-align: center;
-```
-
 }
 
 footer > div:last-child p {
@@ -713,7 +611,7 @@ font-size: 11px;
 }
 
 /* =========================================================
-MOBILE
+TABLET
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -770,7 +668,7 @@ footer {
 }
 
 /* =========================================================
-SMALL MOBILE
+MOBILE
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -862,4 +760,6 @@ footer {
 footer > div:last-child {
     grid-column: auto;
 }
+```
+
 }
