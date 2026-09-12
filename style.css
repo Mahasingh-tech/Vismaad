@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+/* =========================================================
+   VISMAAD FOODS INTERNATIONAL
+   Premium Food Website
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;500;600;700&display=swap');
 
 
 /* =========================================================
    RESET
-========================================================= */
+   ========================================================= */
 
 * {
     margin: 0;
@@ -17,26 +22,51 @@ html {
 
 body {
     font-family: "Montserrat", sans-serif;
-    background: #fffdf9;
     color: #222;
+    background: #fffdf9;
     line-height: 1.7;
 }
 
 
 /* =========================================================
+   HEADINGS / BRAND / NAVIGATION
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo-text,
+nav a,
+.btn,
+.eyebrow,
+.iso-badge,
+footer h3,
+footer a {
+    font-family: "Allura", cursive;
+}
+
+
+/* =========================================================
    HEADER
-========================================================= */
+   ========================================================= */
 
 header {
     width: 100%;
     min-height: 105px;
     padding: 15px 5%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 35px;
+
     background: #ffffff;
     border-bottom: 1px solid #eee5dc;
+
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -47,6 +77,7 @@ header {
 
 header > div:first-child {
     flex: 0 0 auto;
+
     display: flex;
     align-items: center;
 }
@@ -55,485 +86,600 @@ header > div:first-child img {
     width: 270px !important;
     max-width: none !important;
     height: auto !important;
+
     display: block !important;
 }
 
 
-/* NAVIGATION */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 nav {
     flex: 1;
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
     gap: 28px;
+
     white-space: nowrap;
 }
 
 nav a {
     position: relative;
+
     text-decoration: none;
-    color: #222;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
+
+    color: #641b1b;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    transition: 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #9b2c2c;
+
     transition: 0.3s ease;
 }
 
 nav a:hover {
-    color: #8b0000;
+    color: #9b2c2c;
 }
 
-nav a:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: #8b0000;
-    transition: 0.3s ease;
-}
-
-nav a:not(:last-child):hover::after {
+nav a:hover::after {
     width: 100%;
-}
-
-nav a:last-child {
-    background: #8b0000;
-    color: #ffffff;
-    padding: 11px 20px;
-    border-radius: 4px;
-}
-
-nav a:last-child:hover {
-    background: #650000;
-    color: #ffffff;
 }
 
 
 /* =========================================================
-   GENERAL SECTIONS
-========================================================= */
+   MAIN
+   ========================================================= */
 
-section {
+main {
     width: 100%;
-    padding: 90px 7%;
-}
-
-section h2 {
-    font-family: "Montserrat", sans-serif;
-    color: #8b0000;
-    font-size: 38px;
-    font-weight: 800;
-    letter-spacing: -1.5px;
-    line-height: 1.15;
-    margin-bottom: 20px;
-}
-
-section p {
-    max-width: 850px;
+    overflow: hidden;
 }
 
 
 /* =========================================================
    HERO
-========================================================= */
+   ========================================================= */
 
 #home {
     min-height: 650px;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+
+    padding: 90px 7%;
+
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+
     gap: 70px;
-    padding-top: 80px;
-    padding-bottom: 80px;
 
     background:
         linear-gradient(
-            90deg,
+            135deg,
             #fffdf9 0%,
-            #fffaf4 55%,
-            #f8eee7 100%
+            #f8eee5 100%
         );
 }
 
-
-/* MAIN STYLISH HEADING */
+#home > div:first-child {
+    flex: 1;
+    max-width: 650px;
+}
 
 #home h1 {
-    font-family: "Montserrat", sans-serif;
-    color: #8b0000;
-    font-size: clamp(44px, 5vw, 74px);
-    font-weight: 900;
-    letter-spacing: -3.5px;
-    line-height: 0.98;
+    color: #741f1f;
+
+    font-size: clamp(65px, 7vw, 105px);
+    line-height: 0.95;
+
+    font-weight: 400;
+
     margin-bottom: 25px;
-    max-width: 850px;
+}
+
+#home p {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 17px;
+    color: #555;
+
+    max-width: 620px;
+
+    margin-bottom: 35px;
 }
 
 
-/* SMALL EYEBROW */
+/* =========================================================
+   EYEBROW
+   ========================================================= */
 
-#home .eyebrow {
-    font-family: "Montserrat", sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #8b0000;
+.eyebrow {
+    color: #a0783b;
+
+    font-size: 30px;
+
     margin-bottom: 15px;
 }
 
 
-/* HERO TEXT */
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
-#home p {
-    font-size: 18px;
-    font-weight: 400;
-    max-width: 650px;
-    margin-bottom: 30px;
-}
-
-
-/* HERO IMAGE */
-
-#home img {
-    width: 100%;
-    max-width: 520px;
-    display: block;
-    margin: auto;
-}
-
-
-/* HERO BUTTONS */
-
-#home a {
+.btn {
     display: inline-block;
-    text-decoration: none;
-    padding: 13px 25px;
+
+    padding: 13px 30px;
+
     margin-right: 12px;
-    border-radius: 4px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 25px;
+    font-weight: 400;
+
     transition: 0.3s ease;
 }
 
-#home a:first-of-type {
-    background: #8b0000;
+.btn-primary {
     color: white;
+    background: #761f1f;
 }
 
-#home a:first-of-type:hover {
-    background: #650000;
+.btn-primary:hover {
+    background: #4e1212;
+    transform: translateY(-2px);
 }
 
-#home a:last-of-type {
-    border: 1px solid #8b0000;
-    color: #8b0000;
+.btn-secondary {
+    color: #761f1f;
+
+    background: transparent;
+
+    border: 1px solid #761f1f;
 }
 
-#home a:last-of-type:hover {
-    background: #8b0000;
+.btn-secondary:hover {
+    background: #761f1f;
     color: white;
 }
 
 
 /* =========================================================
-   WELCOME SECTION
-========================================================= */
+   HERO IMAGE
+   ========================================================= */
 
-main > section:nth-of-type(2) {
+#home > div:last-child {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home img {
+    width: 100%;
+    max-width: 520px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.12));
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+section {
+    padding: 90px 7%;
+}
+
+section > h2 {
+    color: #741f1f;
+
     text-align: center;
-    background: #ffffff;
+
+    font-size: clamp(55px, 6vw, 85px);
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 55px;
 }
 
-main > section:nth-of-type(2) h2 {
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -2px;
-}
+section > p {
+    font-family: "Montserrat", sans-serif;
 
-main > section:nth-of-type(2) p {
-    margin: auto;
+    max-width: 850px;
+
+    margin: 0 auto 30px;
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 16px;
 }
 
 
 /* =========================================================
    PRODUCTS
-========================================================= */
+   ========================================================= */
 
 #products {
-    background: #fffdf9;
-}
-
-#products > h2,
-#products > p {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#products > h2 {
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -2px;
-}
-
-#products > p {
-    margin-bottom: 45px;
-}
-
-#products > div {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-#products article {
     background: #ffffff;
-    border: 1px solid #eee5dc;
-    border-radius: 8px;
-    padding: 25px;
-    text-align: center;
-    transition: 0.3s ease;
-    box-shadow: 0 5px 20px rgba(80, 30, 20, 0.05);
 }
 
+#products > div,
+.products-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 28px;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card,
+#products article {
+    background: #fffdf9;
+
+    border: 1px solid #eee1d4;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    padding-bottom: 28px;
+
+    transition: 0.35s ease;
+}
+
+.product-card:hover,
 #products article:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(80, 30, 20, 0.12);
+
+    box-shadow:
+        0 18px 40px rgba(84, 33, 20, 0.12);
 }
 
+.product-card img,
 #products article img {
     width: 100%;
-    height: 220px;
+    height: 230px;
+
     object-fit: contain;
-    margin-bottom: 20px;
+
+    padding: 20px;
+
+    background: #faf4ed;
 }
 
+.product-card h3,
 #products article h3 {
+    color: #741f1f;
+
+    font-size: 38px;
+    font-weight: 400;
+
+    margin: 20px 15px 8px;
+}
+
+.product-card p,
+#products article p {
     font-family: "Montserrat", sans-serif;
-    color: #8b0000;
-    font-size: 20px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    margin-bottom: 10px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    padding: 0 20px;
 }
 
 
 /* =========================================================
    WHY VISMAAD
-========================================================= */
+   ========================================================= */
 
-main > section:nth-of-type(4) {
-    background: #8b0000;
-    color: #ffffff;
-    text-align: center;
+#why-vismaad {
+    background: #f8eee5;
 }
 
-main > section:nth-of-type(4) h2 {
-    color: #ffffff;
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -2px;
-}
-
-main > section:nth-of-type(4) > div {
+.why-grid {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 25px;
-    margin-top: 40px;
 }
 
-main > section:nth-of-type(4) article {
-    padding: 30px 20px;
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 8px;
+.why-card,
+#why-vismaad article {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    border: 1px solid #ead9ca;
 }
 
-main > section:nth-of-type(4) article h3 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 19px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
+.why-card h3,
+#why-vismaad article h3 {
+    color: #741f1f;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
     margin-bottom: 12px;
+}
+
+.why-card p,
+#why-vismaad article p {
+    font-family: "Montserrat", sans-serif;
+
+    color: #666;
+
+    font-size: 14px;
 }
 
 
 /* =========================================================
    ABOUT
-========================================================= */
+   ========================================================= */
 
 #about {
     background: #ffffff;
-}
 
-#about > div {
-    max-width: 1000px;
-    margin: auto;
-}
-
-#about h2 {
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -2px;
+    text-align: center;
 }
 
 #about p {
-    margin-bottom: 18px;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    font-family: "Montserrat", sans-serif;
+
+    color: #555;
+
+    font-size: 16px;
 }
 
 
 /* =========================================================
    QUALITY
-========================================================= */
+   ========================================================= */
 
 #quality {
-    background: #fff7f0;
+    background: #fffdf9;
 }
 
-#quality h2 {
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -2px;
-}
-
-#quality > div {
+.quality-grid {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 25px;
-    margin-top: 40px;
+
+    margin-bottom: 45px;
 }
 
+.quality-grid article,
 #quality article {
-    background: #ffffff;
-    padding: 30px 22px;
-    border-radius: 8px;
-    border: 1px solid #eee5dc;
     text-align: center;
+
+    padding: 30px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #eadfd5;
+
+    border-radius: 16px;
 }
 
+.quality-grid h3,
 #quality article h3 {
-    font-family: "Montserrat", sans-serif;
-    color: #8b0000;
-    font-size: 19px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
+    color: #741f1f;
+
+    font-size: 34px;
+
+    font-weight: 400;
+
     margin-bottom: 10px;
 }
 
-#quality > div:last-child {
-    display: block;
-    margin-top: 40px;
-    text-align: center;
+.quality-grid p,
+#quality article p {
+    font-family: "Montserrat", sans-serif;
+
+    color: #666;
+
+    font-size: 14px;
 }
 
-#quality > div:last-child strong {
-    display: inline-block;
-    padding: 12px 25px;
-    border: 2px solid #8b0000;
-    border-radius: 4px;
-    color: #8b0000;
+
+/* ISO */
+
+.iso-badge {
+    width: fit-content;
+
+    margin: 40px auto 0;
+
+    padding: 15px 35px;
+
+    color: #ffffff;
+
+    background: #741f1f;
+
+    border-radius: 40px;
+
+    font-size: 32px;
 }
 
 
 /* =========================================================
    CONTACT
-========================================================= */
+   ========================================================= */
 
 #contact {
-    background: #ffffff;
+    background:
+        linear-gradient(
+            135deg,
+            #741f1f,
+            #4e1212
+        );
+
+    color: white;
+
     text-align: center;
 }
 
 #contact h2 {
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -2px;
+    color: white;
 }
 
-#contact > div {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-#contact > div > div {
-    width: 300px;
-    padding: 30px;
-    border: 1px solid #eee5dc;
-    border-radius: 8px;
-    background: #fffdf9;
-}
-
-#contact h3 {
-    font-family: "Montserrat", sans-serif;
-    color: #8b0000;
-    font-size: 19px;
-    font-weight: 800;
-    margin-bottom: 10px;
+#contact p {
+    color: #f5e9df;
 }
 
 #contact a {
-    color: #8b0000;
+    color: white;
+
     text-decoration: none;
-    font-weight: 600;
+}
+
+.contact-info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 60px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+.contact-info div {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 16px;
 }
 
 
 /* =========================================================
    FOOTER
-========================================================= */
+   ========================================================= */
 
 footer {
-    background: #2b0808;
-    color: #ffffff;
-    padding: 60px 7% 25px;
+    padding: 55px 7% 25px;
+
+    background: #260b0b;
+
+    color: #eee;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
 }
 
 footer img {
-    width: 200px;
-    height: auto;
+    width: 210px;
+
     margin-bottom: 20px;
 }
 
+footer h3 {
+    color: #e8cfa5;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+footer p,
+footer li,
 footer a {
-    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    color: #ddd;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 8px;
+}
+
+footer a {
     text-decoration: none;
+
+    transition: 0.3s ease;
 }
 
 footer a:hover {
-    color: #e6b87a;
+    color: #e8cfa5;
 }
 
-footer h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    margin-bottom: 12px;
-}
+.footer-bottom {
+    grid-column: 1 / -1;
 
-footer > div:last-child {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 25px;
+
+    margin-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.15);
+
     text-align: center;
-    font-size: 13px;
 }
 
 
 /* =========================================================
-   TABLET
-========================================================= */
+   RESPONSIVE — TABLET
+   ========================================================= */
 
 @media (max-width: 1100px) {
 
     header {
-        padding: 15px 4%;
-        gap: 20px;
+        padding: 15px 3%;
     }
 
     header > div:first-child img {
@@ -541,109 +687,154 @@ footer > div:last-child {
     }
 
     nav {
-        gap: 16px;
+        gap: 18px;
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 21px;
     }
 
     #home {
-        gap: 40px;
+        padding: 70px 5%;
     }
 
     #products > div,
-    main > section:nth-of-type(4) > div,
-    #quality > div {
+    .products-grid,
+    .why-grid,
+    .quality-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 
 /* =========================================================
-   MOBILE
-========================================================= */
+   RESPONSIVE — MOBILE
+   ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
     header {
         min-height: auto;
-        padding: 15px 5%;
+
+        padding: 15px 20px;
+
         flex-direction: column;
+
         gap: 15px;
     }
 
-    header > div:first-child {
-        width: 100%;
-        justify-content: center;
-    }
-
     header > div:first-child img {
-        width: 210px !important;
+        width: 220px !important;
     }
 
     nav {
         width: 100%;
+
         justify-content: center;
+
         flex-wrap: wrap;
-        gap: 12px 18px;
+
+        gap: 12px 20px;
+
         white-space: normal;
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 21px;
     }
 
-    nav a:last-child {
-        padding: 9px 15px;
-    }
-
-    section {
-        padding: 65px 6%;
-    }
-
-    section h2 {
-        font-size: 30px;
-        letter-spacing: -1px;
-    }
 
     #home {
         min-height: auto;
-        grid-template-columns: 1fr;
+
+        padding: 65px 25px;
+
+        flex-direction: column;
+
         text-align: center;
-        padding-top: 60px;
+
+        gap: 40px;
+    }
+
+    #home > div:first-child {
+        max-width: 100%;
     }
 
     #home h1 {
-        font-size: 42px;
-        letter-spacing: -2px;
+        font-size: 65px;
     }
 
     #home p {
-        font-size: 16px;
+        font-size: 15px;
+    }
+
+    #home > div:last-child {
+        width: 100%;
     }
 
     #home img {
         max-width: 400px;
     }
 
+
+    section {
+        padding: 65px 25px;
+    }
+
+    section > h2 {
+        font-size: 60px;
+
+        margin-bottom: 40px;
+    }
+
+
     #products > div,
-    main > section:nth-of-type(4) > div,
-    #quality > div {
+    .products-grid,
+    .why-grid,
+    .quality-grid {
         grid-template-columns: 1fr;
     }
 
-    #contact > div {
-        flex-direction: column;
-        align-items: center;
+
+    .product-card h3,
+    #products article h3 {
+        font-size: 36px;
     }
 
-    #contact > div > div {
-        width: 100%;
-        max-width: 350px;
+
+    .why-card h3,
+    #why-vismaad article h3 {
+        font-size: 36px;
     }
+
+
+    .quality-grid h3,
+    #quality article h3 {
+        font-size: 34px;
+    }
+
+
+    .contact-info {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
 
     footer {
+        grid-template-columns: 1fr;
+
         text-align: center;
+
+        padding: 45px 25px 25px;
+    }
+
+    footer img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-bottom {
+        grid-column: auto;
     }
 }
