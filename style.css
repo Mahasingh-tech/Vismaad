@@ -30,12 +30,12 @@ body {
 
 header {
     width: 100%;
-    min-height: 120px;
-    padding: 10px 5%;
+    min-height: 105px;
+    padding: 15px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 35px;
     background: #ffffff;
     border-bottom: 1px solid #eee5dc;
     position: sticky;
@@ -52,9 +52,9 @@ header > div:first-child {
 }
 
 header > div:first-child img {
-    width: 360px !important;
-    height: auto !important;
+    width: 270px !important;
     max-width: none !important;
+    height: auto !important;
     display: block !important;
 }
 
