@@ -1,5 +1,5 @@
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 
 /* =========================================================
@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -98,8 +99,6 @@ nav a:not(:last-child):hover::after {
     width: 100%;
 }
 
-/* ENQUIRE NOW */
-
 nav a:last-child {
     background: #8b0000;
     color: #ffffff;
@@ -123,9 +122,10 @@ section {
 }
 
 section h2 {
-    font-family: "Cinzel", serif;
+    font-family: "Montserrat", sans-serif;
     color: #8b0000;
     font-size: 38px;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -156,9 +156,10 @@ section p {
 }
 
 #home h1 {
-    font-family: "Cinzel Decorative", serif;
+    font-family: "Montserrat", sans-serif;
     color: #8b0000;
     font-size: clamp(42px, 5vw, 72px);
+    font-weight: 700;
     line-height: 1.15;
     margin-bottom: 20px;
 }
@@ -268,9 +269,10 @@ main > section:nth-of-type(2) p {
 }
 
 #products article h3 {
-    font-family: "Cinzel", serif;
+    font-family: "Montserrat", sans-serif;
     color: #8b0000;
     font-size: 20px;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
@@ -303,7 +305,8 @@ main > section:nth-of-type(4) article {
 }
 
 main > section:nth-of-type(4) article h3 {
-    font-family: "Cinzel", serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     margin-bottom: 12px;
 }
 
@@ -350,8 +353,9 @@ main > section:nth-of-type(4) article h3 {
 }
 
 #quality article h3 {
-    font-family: "Cinzel", serif;
+    font-family: "Montserrat", sans-serif;
     color: #8b0000;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
@@ -396,8 +400,9 @@ main > section:nth-of-type(4) article h3 {
 }
 
 #contact h3 {
-    font-family: "Cinzel", serif;
+    font-family: "Montserrat", sans-serif;
     color: #8b0000;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
@@ -434,7 +439,8 @@ footer a:hover {
 }
 
 footer h3 {
-    font-family: "Cinzel", serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     margin-bottom: 12px;
 }
 
