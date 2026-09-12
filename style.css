@@ -52,10 +52,10 @@ header > div:first-child {
 }
 
 header > div:first-child img {
-    width: 270px !important;
-    max-width: none !important;
+    width: 360px !important;
     height: auto !important;
-    display: block;
+    max-width: none !important;
+    display: block !important;
 }
 
 /* NAVIGATION */
